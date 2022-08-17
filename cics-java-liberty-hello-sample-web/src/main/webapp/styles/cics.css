@@ -1,0 +1,58 @@
+body {
+    font-family: arial;
+}
+
+header h1 {
+    color: rgb(34, 69, 125);
+    font-style: normal;
+    font-size: x-large;
+    padding-top: 20px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a img {
+    width: 1150px;
+    height: 130px;
+}
+
+main {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(34, 69, 125);
+}
+
+main h1 {
+    color: rgb(34, 69, 125);
+    font-style: normal;
+    font-size: large;
+    padding-bottom: 0;
+}
+
+.details {
+    font-weight: bold;
+}
+
+td,
+th {
+    padding: 5px 10px;
+}
+
+th {
+    color: rgb(34, 69, 125);
+    text-align: left;
+    border-bottom: 1px solid rgb(34, 69, 125);
+}
+
+table {
+    border-collapse: collapse;
+    min-width: 50%;
+}
+
+caption {
+    padding: 10px;
+    caption-side: bottom;
+    font-size: 75%;
+}
