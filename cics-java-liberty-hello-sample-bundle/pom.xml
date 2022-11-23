@@ -34,6 +34,12 @@
                 <extensions>true</extensions>
                 <configuration>
                     <defaultjvmserver>${jvmserver}</defaultjvmserver>
+                    
+                    <url>${cmci_url}</url>
+                    <bunddef>HELLOSMP</bunddef>
+                    <csdgroup>SAMPLES</csdgroup>
+                    <cicsplex>${cmci_cicsplex}</cicsplex>
+                    <region>${cmci_region}</region>
                 </configuration>
 
                 <executions>
@@ -41,13 +47,7 @@
                         <goals>
                             <goal>deploy</goal>
                         </goals>
-                        <configuration>
-                            <url>${cmci_url}</url>
-                            <bunddef>HELLOSMP</bunddef>
-                            <csdgroup>SAMPLES</csdgroup>
-                            <cicsplex>${cmci_cicsplex}</cicsplex>
-                            <region>${cmci_region}</region>
-                        </configuration>
+                        <phase>disabled</phase>
                     </execution>
                 </executions>
             </plugin>
