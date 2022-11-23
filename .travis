@@ -1,0 +1,8 @@
+dist: xenial
+language: java
+jdk:
+- openjdk8
+deploy:
+  provider: script
+  script: 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then mvn com.ibm.cics:cics-bundle-maven-plugin:deploy --projects cics-java-liberty-hello-sample-bundle; fi'
+  on: main
