@@ -1,12 +1,15 @@
 language: java
-jdk: 
+jdk:
 - openjdk8
 - openjdk11
+- ibmjdk8
 jobs:
   include:
   - name: Gradle
+    env: GRADLE_BUILD=true
     install: gradle assemble
     script:  gradle check
   - name: Maven
+    env: GRADLE_BUILD=false
     install: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
     script:  mvn test -B
