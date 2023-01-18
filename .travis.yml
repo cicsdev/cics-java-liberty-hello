@@ -6,28 +6,11 @@ env:
 - BUILD_TOOL=gradle
 - BUILD_TOOL=gradlew
 - BUILD_TOOL=mvn
-install: skip
-script: skip
-jobs:
-  include:
-  - name: Gradle
-    jdk:
-    - openjdk8
-    - openjdk11
-    env: BUILD_TOOL=gradle
-    install: gradle assemble
-    script:  gradle check
-  - name: Gradle Wrapper
-    jdk:
-    - openjdk8
-    - openjdk11
-    env: BUILD_TOOL=gradlew
-    install: ./gradlew assemble
-    script: ./gradlew check
-  - name: Maven
-    jdk:
-    - openjdk8
-    - openjdk11
-    env: BUILD_TOOL=mvn
-    install: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-    script:  mvn test -B
+install: 
+- [ $BUILD_TOOL == gradle ] && gradle assemble
+- [ $BUILD_TOOL == gradlew ] && ./gradlew assemble
+- [ $BULD_TOOL == mvn ] && mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+script:
+- [ $BUILD_TOOL == gradle ] && gradle check
+- [ $BUILD_TOOL == gradlew ] && ./gradlew check
+- [ $BULD_TOOL == mvn ] && mvn test -B
