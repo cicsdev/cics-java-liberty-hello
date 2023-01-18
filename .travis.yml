@@ -6,6 +6,7 @@ env:
 - BUILD_TOOL=gradle
 - BUILD_TOOL=mvn
 jobs:
+  include:
   - name: Maven
     env: BUILD_TOOL=mvn
     install: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
