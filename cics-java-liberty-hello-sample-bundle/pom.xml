@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>com.ibm.cicsdev</groupId>
         <artifactId>cics-java-liberty-hello-sample</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.ibm.cicsdev</groupId>
     <artifactId>cics-java-liberty-hello-sample-bundle</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <name>CICS Liberty Hello Sample - CICS Bundle</name>
+
+    <name>CICS Liberty Hello Application - CICS Bundle</name>
+    <description>This module packages the web module into a CICS bundle.</description>
 
     <packaging>cics-bundle</packaging>
 
     <dependencies>
         <dependency>
-            <groupId>com.ibm.cicsdev</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>cics-java-liberty-hello-sample-web</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${project.version}</version>
             <type>war</type>
         </dependency>
     </dependencies>
@@ -34,12 +36,6 @@
                 <extensions>true</extensions>
                 <configuration>
                     <defaultjvmserver>${jvmserver}</defaultjvmserver>
-                    
-                    <url>${cmci_url}</url>
-                    <bunddef>WLPHELLO</bunddef>
-                    <csdgroup>SAMPLES</csdgroup>
-                    <cicsplex>${cmci_cicsplex}</cicsplex>
-                    <region>${cmci_region}</region>
                 </configuration>
 
                 <executions>
@@ -47,7 +43,13 @@
                         <goals>
                             <goal>deploy</goal>
                         </goals>
-                        <phase>disabled</phase>
+                        <configuration>
+                            <url>${cmci_url}</url>
+                            <bunddef>WLPHELLO</bunddef>
+                            <csdgroup>SAMPLES</csdgroup>
+                            <cicsplex>${cmci_cicsplex}</cicsplex>
+                            <region>${cmci_region}</region>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>

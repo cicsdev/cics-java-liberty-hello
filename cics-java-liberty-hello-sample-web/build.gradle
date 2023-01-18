@@ -1,0 +1,6 @@
+plugins {
+    id 'war'
+}
+
+version = '1.0.0-SNAPSHOT'
+description = 'CICS Liberty Hello Application - Web'
