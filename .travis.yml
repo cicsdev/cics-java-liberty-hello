@@ -1,8 +1,11 @@
-dist: xenial
 language: java
-jdk:
-- openjdk8
-deploy:
-  provider: script
-  script: 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then mvn package com.ibm.cics:cics-bundle-maven-plugin:deploy --projects cics-java-liberty-hello-sample-bundle; fi'
-  on: main
+before_install:
+# install IBM JDK8
+- curl -sS -O https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/8.0.3.12/linux/x64/ibm-java-x86_64-sdk-8.0-3.12.bin
+- echo "LICENSE_ACCEPTED=TRUE" > installer.properties
+- chmod +x ibm-java-x86_64-sdk-8.0-3.12.bin
+- sudo ./ibm-java-x86_64-sdk-8.0-3.12.bin -i silent
+env:
+  global:
+  - JAVA_HOME=/opt/ibm/java-x86_64-80
+  - PATH=${JAVA_HOME}/bin:${PATH}
