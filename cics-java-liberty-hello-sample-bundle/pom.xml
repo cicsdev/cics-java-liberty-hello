@@ -37,21 +37,6 @@
                 <configuration>
                     <defaultjvmserver>${jvmserver}</defaultjvmserver>
                 </configuration>
-
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>deploy</goal>
-                        </goals>
-                        <configuration>
-                            <url>${cmci_url}</url>
-                            <bunddef>WLPHELLO</bunddef>
-                            <csdgroup>SAMPLES</csdgroup>
-                            <cicsplex>${cmci_cicsplex}</cicsplex>
-                            <region>${cmci_region}</region>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
