@@ -2,7 +2,9 @@ language: java
 jdk:
 - openjdk8
 - openjdk11
-- ibmjdk8
+env:
+- GRADLE_BUILD=true
+- GRADLE_BUILD=false
 jobs:
   include:
   - name: Gradle
