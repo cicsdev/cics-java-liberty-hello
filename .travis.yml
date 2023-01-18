@@ -11,14 +11,23 @@ script: skip
 jobs:
   include:
   - name: Gradle
+    jdk:
+    - openjdk8
+    - openjdk11
     env: BUILD_TOOL=gradle
     install: gradle assemble
     script:  gradle check
   - name: Gradle Wrapper
+    jdk:
+    - openjdk8
+    - openjdk11
     env: BUILD_TOOL=gradlew
     install: ./gradlew assemble
     script: ./gradlew check
   - name: Maven
+    jdk:
+    - openjdk8
+    - openjdk11
     env: BUILD_TOOL=mvn
     install: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
     script:  mvn test -B
