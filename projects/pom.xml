@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.ibm.cicsdev</groupId>
-    <artifactId>cics-java-liberty-hello-sample</artifactId>
+    <artifactId>cics-java-liberty-webapp</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -15,8 +15,8 @@
     <url>https://github.com/cicsdev/cics-java-liberty-webapp/</url>
 
     <modules>
-        <module>cics-java-liberty-hello-sample-web</module>
-        <module>cics-java-liberty-hello-sample-bundle</module>
+        <module>cics-java-liberty-webapp-web</module>
+        <module>cics-java-liberty-webapp-bundle</module>
     </modules>
 
     <licenses>

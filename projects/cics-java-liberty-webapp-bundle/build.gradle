@@ -3,7 +3,7 @@ plugins {
 }
 
 dependencies {
-    cicsBundlePart project(path: ':cics-java-liberty-hello-sample-web', configuration: 'archives')
+    cicsBundlePart project(path: ':cics-java-liberty-webapp-web', configuration: 'archives')
 }
 
 version = '1.0.0-SNAPSHOT'
