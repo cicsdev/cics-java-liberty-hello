@@ -12,7 +12,7 @@
 
     <name>CICS Liberty Hello Application</name>
     <description>A simple enterprise Java web application that can run in a CICS Liberty JVM server.</description>
-    <url>https://github.com/cicsdev/cics-java-liberty-hello/</url>
+    <url>https://github.com/cicsdev/cics-java-liberty-webapp/</url>
 
     <modules>
         <module>cics-java-liberty-hello-sample-web</module>
@@ -23,18 +23,43 @@
         <license>
             <name>Apache-2.0</name>
             <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
         </license>
     </licenses>
 
-    <organization>
-        <name>IBM CICS Transaction Server for z/OS</name>
-        <url>https://www.ibm.com/products/cics-transaction-server</url>
-    </organization>
+    <developers>
+        <developer>
+            <name>IBM CICS Transaction Server for z/OS</name>
+            <url>https://www.ibm.com/products/cics-transaction-server</url>
+        </developer>
+    </developers>
 
     <properties>
+        <!-- CICS bundle properties -->
+        <cics.jvmserver>DFHWLP</cics.jvmserver>
+
+        <!-- Plugin versions -->
+        <cics.bundle.plugin.version>1.0.3</cics.bundle.plugin.version>
+
+        <!-- Java project properties -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.ibm.cics</groupId>
+                    <artifactId>cics-bundle-maven-plugin</artifactId>
+                    <version>${cics.bundle.plugin.version}</version>
+                    <extensions>true</extensions>
+                    <configuration>
+                        <defaultjvmserver>${cics.jvmserver}</defaultjvmserver>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>
