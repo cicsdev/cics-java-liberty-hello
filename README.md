@@ -1,4 +1,4 @@
-# CICS Liberty Hello Application
+# CICS Liberty Web Application
 A simple enterprise Java web application that can run in a CICS Liberty JVM server.
 
 This sample demonstrates a simple Java web application using JavaServer Pages to echo information about the CICS task the page is running on.
