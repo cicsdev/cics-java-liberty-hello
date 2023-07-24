@@ -13,11 +13,21 @@ _**Tip:** Eclipse Git provides an 'Import existing Projects' check-box when clon
 The sample can be built with CICS Explorer, Gradle or Apache Maven.
 
 ### Building with CICS Explorer
+TODO
 
 ### Building with Gradle
+From the `projects/` directory, run the Gradle command.
+
+```sh
+gradle clean assemble
+```
 
 ### Building with Apache Maven
+From the `projects/` directory, run the Maven command.
 
+```sh
+mvn clean package
+```
 
 ## Deploying
 
@@ -30,14 +40,24 @@ The sample can be built with CICS Explorer, Gradle or Apache Maven.
 The application can be deployed to z/FS as either a CICS bundle file, or as an application.
 
 #### Deploying a CICS bundle using CICS Explorer
-TODO
+1. Create a new CICS bundle project.
+2. Add the `cics-java-liberty-hello-sample-web` project as a Dynamic Web Project include.
+3. Deploy the bundle by clicking **Export Bundle Project to z/OS UNIX File System**.
 
 #### Deploying a CICS bundle using command line tools
-TODO
+1. Copy the compressed CICS bundle file to z/FS.
+   * Gradle: `projects/cics-java-liberty-hello-sample-bundle/build/distributions/cics-java-liberty-hello-sample-bundle-1.0.0.zip`
+   * Maven: `projects/cics-java-liberty-hello-sample-bundle/target/cics-java-liberty-hello-sample-bundle-1.0.0.zip` 
+2. Extract the compressed file on z/FS.
+   ```sh
+   jar xf cics-java-liberty-hello-sample-bundle-1.0.0.zip
+   ```
 
 #### Deploying an application using command line tools
-1. Copy the application file from `projects/cics-java-liberty-hello-sample-web/build/libs/cics-java-liberty-hello-sample-web-1.0.0.war` (Gradle) or `projects/cics-java-liberty-hello-sample-web/target/cics-java-liberty-hello-sample-web-1.0.0.war` (Maven) to z/FS
-2. Configure the Liberty server to include the application using the following `server.xml` configuration.
+1. Copy the application file to z/FS
+   * Gradle: `projects/cics-java-liberty-hello-sample-web/build/libs/cics-java-liberty-hello-sample-web-1.0.0.war`
+   * Maven: `projects/cics-java-liberty-hello-sample-web/target/cics-java-liberty-hello-sample-web-1.0.0.war`
+3. Configure the Liberty server to include the application using the following `server.xml` configuration.
    ```xml
    <application id="cics-java-liberty-app" location="/path/to/cics-java-liberty-hello-sample-web-1.0.0.war" />
    ```
@@ -54,4 +74,4 @@ If the application is deployed as a CICS bundle, use the following steps to defi
 2. Access the URL printed in the CWWKT0016I message (`http://zos.example.com:9080/cics-java-liberty-app-1.0.0/`) to access the JSP.
 
 ## License
-This project is licensed under [Apache License Version 2.0](LICENSE).   
+This project is licensed under [Apache License Version 2.0](LICENSE).
