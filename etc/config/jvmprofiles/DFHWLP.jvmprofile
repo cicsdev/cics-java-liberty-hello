@@ -1,0 +1,32 @@
+#######################################################################
+# JVM profile: DFHWLP                                                 #
+#                                                                     #
+#    Sample JVM profile for CICS TS Liberty JVM server (WLP)          #
+#                                                                     #
+# See topic "Options for JVMs in a CICS environment" in the Knowledge #
+# Center: https://www.ibm.com/docs/SSGMCP_6.2.0?topic=properties-options-jvms-in-cics-environment
+#                                                                     #
+#######################################################################
+#                                                                     #
+# PID 5655-YA1                                                        #
+# Copyright IBM Corp. 2012, 2023                                      #
+#                                                                     #
+#######################################################################
+JAVA_HOME=/usr/lpp/java/J8.0_64/
+WORK_DIR=.
+
+WLP_INSTALL_DIR=&USSHOME;/wlp
+-Dcom.ibm.cics.jvmserver.wlp.autoconfigure=true
+
+-Xms128M
+-Xmx256M
+-Xmso1M
+-Xgcpolicy:gencon
+-Xscmx256M
+-Xshareclasses:name=cicsts.&APPLID;,groupAccess,nonfatal
+-Xtune:virtualized
+
+-Dcom.ibm.tools.attach.enable=no
+-Dfile.encoding=ISO-8859-1
+
+_BPXK_DISABLE_SHLIB=YES
