@@ -3,6 +3,14 @@ A simple enterprise Java web application that can run in a CICS Liberty JVM serv
 
 This sample demonstrates a simple Java web application using JavaServer Pages to echo information about the CICS task the page is running on.
 
+## Requirements
+* CICS TS for z/OS V5.4 or later
+* Java SE 1.8 or later on the local workstation
+* Eclipse with the IBM CICS SDK for Java EE, Jakarta EE and Liberty, or any IDE
+  that supports usage of the Maven Central artifact
+  [com.ibm.cics:com.ibm.cics.server](https://search.maven.org/artifact/com.ibm.cics/com.ibm.cics.server).
+* _Optional_ A build tool such as Apache Maven or Gradle.
+
 ## Downloading
 - Clone the repository using your IDEs support, such as the Eclipse Git plugin
 - **or**, download the sample as a [compressed file](https://github.com/cicsdev/cics-java-template/archive/main.zip) and unzip onto the workstation.
