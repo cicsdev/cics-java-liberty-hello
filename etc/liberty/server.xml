@@ -8,7 +8,8 @@
     <!-- Default HTTP End Point -->
     <httpEndpoint id="defaultHttpEndpoint" host="*" httpPort="9080" />
 
-    <!-- Reduce z/FS overheads by reducing configuratiom and application polling -->
+    <!-- Reduce z/FS overheads by reducing config and app polling -->
     <config monitorInterval="5s" updateTrigger="polled" />
-    <applicationMonitor updateTrigger="disabled" dropins="dropins" dropinsEnabled="false" pollingRate="5s" />
+    <applicationMonitor updateTrigger="disabled" dropins="dropins" 
+                        dropinsEnabled="false" pollingRate="5s" />
 </server>
