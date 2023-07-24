@@ -1,4 +1,4 @@
 
-rootProject.name = 'cics-java-liberty-webapp'
-include(':cics-java-liberty-webapp-web')
-include(':cics-java-liberty-webapp-bundle')
+rootProject.name = 'cics-java-liberty-hello'
+include(':cics-java-liberty-hello-web')
+include(':cics-java-liberty-hello-bundle')

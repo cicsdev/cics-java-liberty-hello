@@ -1,0 +1,15 @@
+plugins {
+    id 'com.ibm.cics.bundle' version '1.0.3'
+}
+
+dependencies {
+    cicsBundlePart project(path: ':cics-java-liberty-hello-web', configuration: 'archives')
+}
+
+description = 'CICS Liberty Hello Application - CICS Bundle'
+
+cicsBundle {
+    build {
+        defaultJVMServer = jvmserver
+    }
+}

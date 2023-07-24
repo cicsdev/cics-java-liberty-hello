@@ -1,0 +1,7 @@
+
+allprojects {
+    group = 'com.ibm.cicsdev'
+    version = '1.0.0'
+}
+
+description = 'CICS Liberty Hello Application'
