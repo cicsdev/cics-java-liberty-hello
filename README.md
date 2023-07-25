@@ -3,6 +3,9 @@ A simple enterprise Java web application that can run in a CICS Liberty JVM serv
 
 This sample demonstrates a simple Java web application using JavaServer Pages to echo information about the CICS task the page is running on.
 
+## Versions
+* [CICS TS for z/OS V5.4](https://github.com/cicsdev/cics-java-liberty-hello/releases/tag/v5.4) and above
+
 ## Requirements
 * CICS TS for z/OS V5.4 or later
 * Java SE 1.8 or later on the local workstation
