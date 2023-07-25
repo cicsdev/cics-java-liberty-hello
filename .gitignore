@@ -85,5 +85,4 @@ gradle-app.setting
 # Cache of project
 .gradletasknamecache
 
-# Ansible Playbooks - WIP
-playbooks
+bin
