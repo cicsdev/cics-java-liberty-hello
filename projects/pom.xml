@@ -39,11 +39,12 @@
 
         <!-- Plugin versions -->
         <cics.bundle.plugin.version>1.0.3</cics.bundle.plugin.version>
+        <maven.war.plugin>3.4.0</maven.war.plugin>
 
         <!-- Java project properties -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
 
@@ -58,6 +59,11 @@
                     <configuration>
                         <defaultjvmserver>${cics.jvmserver}</defaultjvmserver>
                     </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>${maven.war.plugin}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
