@@ -24,7 +24,7 @@ _**Tip:** Eclipse Git provides an 'Import existing Projects' check-box when clon
 The sample can be built with CICS Explorer, Gradle or Apache Maven.
 
 ### Building with CICS Explorer
-TODO
+The sample should automatically be built in CICS Explorer. If not, select **Project** &rarr; **Build Project**.
 
 ### Building with Gradle
 From the `projects/` directory, run the Gradle command.
