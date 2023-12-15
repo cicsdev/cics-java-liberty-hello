@@ -37,16 +37,11 @@
         <!-- CICS bundle properties -->
         <cics.jvmserver>DFHWLP</cics.jvmserver>
 
-        <!-- Plugin versions -->
-        <cics.bundle.plugin.version>1.0.3</cics.bundle.plugin.version>
-        <maven.war.plugin>3.4.0</maven.war.plugin>
-
         <!-- Java project properties -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
-
 
     <build>
         <pluginManagement>
@@ -54,7 +49,7 @@
                 <plugin>
                     <groupId>com.ibm.cics</groupId>
                     <artifactId>cics-bundle-maven-plugin</artifactId>
-                    <version>${cics.bundle.plugin.version}</version>
+                    <version>1.0.3</version>
                     <extensions>true</extensions>
                     <configuration>
                         <defaultjvmserver>${cics.jvmserver}</defaultjvmserver>
@@ -63,7 +58,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-war-plugin</artifactId>
-                    <version>${maven.war.plugin}</version>
+                    <version>3.4.0</version>
                 </plugin>
             </plugins>
         </pluginManagement>
