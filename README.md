@@ -82,4 +82,4 @@ If the application is deployed as a CICS bundle, use the following steps to defi
 2. Access the URL printed in the CWWKT0016I message (`http://zos.example.com:9080/cics-java-liberty-hello-1.0.0/`) to access the JSP.
 
 ## License
-This project is licensed under [Apache License Version 2.0](LICENSE).
+This project is licensed under [Eclipse Public License - v 2.0](LICENSE).
