@@ -2,9 +2,9 @@ name: Build
 
 on:
   push:
-    branches: ["cicsts/v5.5"]
+    branches: ["cicsts/v6.1"]
   pull_request:
-    branches: ["cicsts/v5.5"]
+    branches: ["cicsts/v6.1"]
 
 jobs:
   build-maven:

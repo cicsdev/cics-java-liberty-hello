@@ -1,12 +1,12 @@
 # CICS Liberty Web Application
-[![Build](https://github.com/cicsdev/cics-java-liberty-hello/actions/workflows/java.yaml/badge.svg?branch=cicsts%2Fv5.5)](https://github.com/cicsdev/cics-java-liberty-hello/actions/workflows/java.yaml)
+[![Build](https://github.com/cicsdev/cics-java-liberty-hello/actions/workflows/java.yaml/badge.svg?branch=cicsts%2Fv6.1)](https://github.com/cicsdev/cics-java-liberty-hello/actions/workflows/java.yaml)
 
 A simple enterprise Java web application that can run in a CICS Liberty JVM server.
 
 This sample demonstrates a simple Java web application using JavaServer Pages to echo information about the CICS task the page is running on.
 
 ## Requirements
-* CICS TS for z/OS V5.5 or later
+* CICS TS for z/OS V6.1 or later
 * Java SE 1.8 or later on the local workstation
 * Eclipse with the IBM CICS SDK for Java EE, Jakarta EE and Liberty, or any IDE
   that supports usage of the Maven Central artifact

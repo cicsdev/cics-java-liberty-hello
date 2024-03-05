@@ -2,7 +2,7 @@
     <!-- Enable features -->
     <featureManager>
         <feature>cicsts:core-1.0</feature>
-        <feature>jsp-2.3</feature>
+        <feature>pages-3.0</feature>
     </featureManager>
 
     <!-- Default HTTP End Point -->
