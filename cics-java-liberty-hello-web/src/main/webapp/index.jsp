@@ -27,8 +27,8 @@
             </div>
             <div>
                 <p>This samples demonstrates a basic enterprise Java web application using
-                    <abbr title="JavaServer Pages/Jakarta Server Pages">JSP</abbr> to display some information from
-                    the <a href="https://www.ibm.com/docs/api/v1/content/SSGMCP_5.4.0/reference/jcics-javadoc/com/ibm/cics/server/Task.html"><code>com.ibm.cics.server.Task</code></a>
+                    JavaServer Pages to display some information from
+                    the <a href="https://www.ibm.com/docs/api/v1/content/SSGMCP_5.5.0/reference/jcics-javadoc/com/ibm/cics/server/Task.html"><code>com.ibm.cics.server.Task</code></a>
                     class.
                 </p>
             </div>
