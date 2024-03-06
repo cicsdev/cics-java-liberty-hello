@@ -1,4 +1,6 @@
 # CICS Liberty Web Application
+[![Build](https://github.com/cicsdev/cics-java-liberty-hello/actions/workflows/java.yaml/badge.svg?branch=cicsts%2Fv5.5)](https://github.com/cicsdev/cics-java-liberty-hello/actions/workflows/java.yaml)
+
 A simple enterprise Java web application that can run in a CICS Liberty JVM server.
 
 This sample demonstrates a simple Java web application using JavaServer Pages to echo information about the CICS task the page is running on.
