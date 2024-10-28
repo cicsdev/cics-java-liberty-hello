@@ -50,7 +50,7 @@
                 <plugin>
                     <groupId>com.ibm.cics</groupId>
                     <artifactId>cics-bundle-maven-plugin</artifactId>
-                    <version>1.0.3</version>
+                    <version>1.0.6</version>
                     <extensions>true</extensions>
                     <configuration>
                         <defaultjvmserver>${cics.jvmserver}</defaultjvmserver>

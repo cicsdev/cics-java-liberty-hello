@@ -28,15 +28,17 @@ The sample should automatically be built in CICS Explorer. If not, select **Proj
 ### Building with Gradle
 From the `projects/` directory, run the Gradle command.
 
+If using the CICS bundle ZIP, the CICS JVM server name should be modified in the jvmserver property in the gradle build properties file to match the required CICS JVMSERVER resource name, or alternatively can be set on the command line as follows, where MYJVM JVMSERVER resource name 
+
 ```sh
-gradle clean assemble
+gradle clean assemble -Pcics.jvmserver=MYJVM
 ```
 
 ### Building with Apache Maven
-From the `projects/` directory, run the Maven command.
+From the `projects/` directory, run the Maven command. If building a CICS bundle ZIP the CICS bundle plugin bundle-war goal is driven using the maven verify phase. The CICS JVM server name should be modified in the property in the pom.xml to match the required CICS JVMSERVER resource name, or alternatively can be set on the command line as follows.
 
 ```sh
-mvn clean package
+mvn clean verify -Dcics.jvmserver=MYJVM
 ```
 
 ## Deploying
@@ -75,7 +77,7 @@ The application can be deployed to z/FS as either a CICS bundle file, or as an a
 ### Configuring the CICS bundle
 If the application is deployed as a CICS bundle, use the following steps to define and install the CICS bundle.
 
-1. Create a bundle definition, setting the BUNDLEDIR to the path to the deployed CICS bundle on z/FS.
+1. Create a bundle definition, setting the BUNDLEDIR attribute to the path to the deployed CICS bundle on z/FS.
 2. Install the bundle definition.
 
 ## Running

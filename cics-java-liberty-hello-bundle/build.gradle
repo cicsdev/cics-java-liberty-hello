@@ -1,5 +1,7 @@
+/* Gradle build file for CICS bundle project zip */
+
 plugins {
-    id 'com.ibm.cics.bundle' version '1.0.3'
+    id 'com.ibm.cics.bundle' version '1.0.6'
 }
 
 dependencies {
@@ -10,6 +12,6 @@ description = 'CICS Liberty Hello Application - CICS Bundle'
 
 cicsBundle {
     build {
-        defaultJVMServer = jvmserver
+        defaultJVMServer = project.findProperty("cics.jvmserver") ?: "DFHWLP"
     }
 }
