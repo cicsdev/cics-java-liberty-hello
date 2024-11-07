@@ -26,14 +26,14 @@ The sample can be built with CICS Explorer, Gradle or Apache Maven.
 The sample should automatically be built in CICS Explorer. If not, select **Project** &rarr; **Build Project**.
 
 ### Building with Gradle
-From the `projects/` directory, run the Gradle command.
+From the root directory, run the Gradle command.
 
 ```sh
 gradle clean assemble
 ```
 
 ### Building with Apache Maven
-From the `projects/` directory, run the Maven command.
+From the root directory, run the Maven command.
 
 ```sh
 mvn clean package
@@ -82,6 +82,7 @@ If the application is deployed as a CICS bundle, use the following steps to defi
 1. Ensure the web application started successfully in Liberty by checking for the CWWKT0016I message in the Liberty messages.log:
    > A CWWKT0016I: Web application available (default_host): http://zos.example.com:9080/cics-java-liberty-hello-1.0.0
 2. Access the URL printed in the CWWKT0016I message (`http://zos.example.com:9080/cics-java-liberty-hello-1.0.0/`) to access the JSP.
+3. When deploying with CICS Explorer, the URL may be (`http://zos.example.com:9080/cics-java-liberty-hello/`) 
 
 ## License
 This project is licensed under [Eclipse Public License - v 2.0](LICENSE).
