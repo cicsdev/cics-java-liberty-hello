@@ -7,7 +7,7 @@ cd "${BASEDIR}"
 
 #--------------------------------------------------------------------------
 #
-# Set Colors
+# Set Colours
 #
 #--------------------------------------------------------------------------
 bold=$(tput bold)
@@ -62,7 +62,7 @@ function update_gradle_proprties_java_version {
     if [ -f "$properties_file" ]; then
         echo "Path to gradle.properties file found."
 
-        sed -i -e "s/^java_version.*/java_version=${local_java}/" $properties_file
+        sed -i "" -e "s/^java_version.*/java_version=${local_java}/" $properties_file
 
         rc=$?
         if [[ "${rc}" != "0" ]]; then
