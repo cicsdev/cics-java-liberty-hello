@@ -3,11 +3,3 @@ plugins {
 }
 
 description = 'CICS Liberty Hello Application - Web'
-
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(java_version)
-        vendor = JvmVendorSpec.IBM
-        implementation = JvmImplementation.J9
-    }
-}
