@@ -36,7 +36,7 @@
     <properties>
         <!-- CICS bundle properties -->
         <cics.jvmserver>DFHWLP</cics.jvmserver>
-        <java.version>11</java.version>
+        <java.version>8</java.version>
 
         <!-- Java project properties -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
