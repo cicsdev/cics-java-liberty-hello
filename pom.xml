@@ -36,7 +36,7 @@
     <properties>
         <!-- CICS bundle properties -->
         <cics.jvmserver>DFHWLP</cics.jvmserver>
-        <java.version>8</java.version>
+        <java.version>11</java.version>
 
         <!-- Java project properties -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -50,7 +50,7 @@
                 <plugin>
                     <groupId>com.ibm.cics</groupId>
                     <artifactId>cics-bundle-maven-plugin</artifactId>
-                    <version>1.0.3</version>
+                    <version>1.0.7</version>
                     <extensions>true</extensions>
                     <configuration>
                         <defaultjvmserver>${cics.jvmserver}</defaultjvmserver>
