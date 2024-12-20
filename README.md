@@ -20,7 +20,11 @@ This sample demonstrates a simple Java web application using JavaServer Pages to
 _**Tip:** Eclipse Git provides an 'Import existing Projects' check-box when cloning a repository._
 
 ## Building
-The sample can be built with CICS Explorer, Gradle or Apache Maven.
+The sample can be built with CICS Explorer, Gradle or Apache Maven. It is recommened to us the supplied Gradle or Maven wrapper to get a consistent and updated version of build tooling.
+
+Once run, Gradle will generate a WAR file in the `/cics-java-liberty-hello-web/build/libs` directory, while Maven will generate it in the `/cics-java-liberty-hello-web/target` directory.
+
+The bundle ZIP file for Gradle will be generated in the `/cics-java-liberty-hello-bundle/build/distributions` directory, while Maven will generate it in the `/cics-java-liberty-hello-bundle/target` directory.
 
 ### Building with CICS Explorer
 The sample should automatically be built in CICS Explorer. If not, select **Project** &rarr; **Build Project**.
@@ -29,14 +33,28 @@ The sample should automatically be built in CICS Explorer. If not, select **Proj
 From the root directory, run the Gradle command.
 
 ```sh
-gradle clean assemble
+gradle clean build
+```
+
+### Building with Gradle Wrapper
+From the root directory, run the Gradle Wrapper command.
+
+```sh
+./gradlew clean build
 ```
 
 ### Building with Apache Maven
 From the root directory, run the Maven command.
 
 ```sh
-mvn clean package
+mvn clean verify
+```
+
+### Building with Maven Wrapper
+From the root directory, run the Maven Wrapper command.
+
+```sh
+./mvnw clean verify
 ```
 
 ## Deploying
@@ -56,8 +74,8 @@ The application can be deployed to z/FS as either a CICS bundle file, or as an a
 
 #### Deploying a CICS bundle using command line tools
 1. Copy the compressed CICS bundle file to z/FS.
-   * Gradle: `projects/cics-java-liberty-hello-bundle/build/distributions/cics-java-liberty-hello-bundle-1.0.0.zip`
-   * Maven: `projects/cics-java-liberty-hello-bundle/target/cics-java-liberty-hello-bundle-1.0.0.zip` 
+   * Gradle: `/cics-java-liberty-hello-bundle/build/distributions/cics-java-liberty-hello-bundle-1.0.0.zip`
+   * Maven: `/cics-java-liberty-hello-bundle/target/cics-java-liberty-hello-bundle-1.0.0.zip` 
 2. Extract the compressed file on z/FS.
    ```sh
    jar xf cics-java-liberty-hello-bundle-1.0.0.zip
@@ -65,8 +83,8 @@ The application can be deployed to z/FS as either a CICS bundle file, or as an a
 
 #### Deploying an application using command line tools
 1. Copy the application file to z/FS
-   * Gradle: `projects/cics-java-liberty-hello-web/build/libs/cics-java-liberty-hello-web-1.0.0.war`
-   * Maven: `projects/cics-java-liberty-hello-web/target/cics-java-liberty-hello-web-1.0.0.war`
+   * Gradle: `/cics-java-liberty-hello-web/build/libs/cics-java-liberty-hello-web-1.0.0.war`
+   * Maven: `/cics-java-liberty-hello-web/target/cics-java-liberty-hello-web-1.0.0.war`
 3. Configure the Liberty server to include the application using the following `server.xml` configuration.
    ```xml
    <application id="cics-java-liberty-hello" location="/path/to/cics-java-liberty-hello-web-1.0.0.war" />
