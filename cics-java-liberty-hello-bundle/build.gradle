@@ -10,6 +10,6 @@ description = 'CICS Liberty Hello Application - CICS Bundle'
 
 cicsBundle {
     build {
-        defaultJVMServer = jvmserver
+        defaultJVMServer = project.findProperty("cics.jvmserver") ?: "DFHOSGI"
     }
 }

@@ -60,9 +60,9 @@ From the root directory, run the Maven Wrapper command.
 ## Deploying
 
 ### Configuring the Liberty JVM server
-1. Create a JVM server with a JVM profile based on the template [JVM profile](etc/jvmprofiles/DFHWLP.jvmprofile).
+1. Create a JVM server with a JVM profile based on the template [JVM profile](etc/config/jvmprofiles/DFHWLP.jvmprofile).
 2. Install the JVM server.
-3. Configure the Liberty server based on the template [`server.xml`](etc/liberty/server.xml).
+3. Configure the Liberty server based on the template [`server.xml`](etc/config/liberty/server.xml).
 
 ### Deploying the application to z/FS
 The application can be deployed to z/FS as either a CICS bundle file, or as an application.
