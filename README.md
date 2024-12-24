@@ -29,22 +29,35 @@ The sample should automatically be built in CICS Explorer. If not, select **Proj
 From the root directory, run the Gradle command.
 
 ```sh
-gradle clean assemble
+gradle clean build
+```
+
+If using the CICS bundle ZIP, the CICS JVM server name should be modified in the jvmserver property in the gradle build properties file to match the required CICS JVMSERVER resource name, or alternatively can be set on the command line as follows, where MYJVM JVMSERVER resource name 
+
+```sh
+gradle clean build -Pcics.jvmserver=MYJVM
 ```
 
 ### Building with Apache Maven
 From the root directory, run the Maven command.
 
 ```sh
-mvn clean package
+mvn clean verify
 ```
+
+If building a CICS bundle ZIP the CICS bundle plugin bundle-war goal is driven using the maven verify phase. The CICS JVM server name should be modified in the property in the pom.xml to match the required CICS JVMSERVER resource name, or alternatively can be set on the command line as follows.
+
+```sh
+mvn clean verify -Dcics.jvmserver=MYJVM
+```
+
 
 ## Deploying
 
 ### Configuring the Liberty JVM server
-1. Create a JVM server with a JVM profile based on the template [JVM profile](etc/jvmprofiles/DFHWLP.jvmprofile).
+1. Create a JVM server with a JVM profile based on the template [JVM profile](etc/config/jvmprofiles/DFHWLP.jvmprofile).
 2. Install the JVM server.
-3. Configure the Liberty server based on the template [`server.xml`](etc/liberty/server.xml).
+3. Configure the Liberty server based on the template [`server.xml`](etc/config/liberty/server.xml).
 
 ### Deploying the application to z/FS
 The application can be deployed to z/FS as either a CICS bundle file, or as an application.
