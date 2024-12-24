@@ -16,4 +16,14 @@
 
   <name>CICS Liberty Hello Application - Web</name>
   <description>This module exposes information about the current CICS system in a JSP page.</description>
+
+  <build>
+    <plugins>
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>3.4.0</version>
+      </plugin>
+    </plugins>
+  </build>
 </project>
