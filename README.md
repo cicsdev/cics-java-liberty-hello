@@ -36,6 +36,12 @@ From the root directory, run the Gradle command.
 gradle clean build
 ```
 
+If using the CICS bundle ZIP, the CICS JVM server name should be modified in the jvmserver property in the gradle build properties file to match the required CICS JVMSERVER resource name, or alternatively can be set on the command line as follows, where MYJVM JVMSERVER resource name 
+
+```sh
+gradle clean build -Pcics.jvmserver=MYJVM
+```
+
 ### Building with Gradle Wrapper
 From the root directory, run the Gradle Wrapper command.
 
@@ -48,6 +54,12 @@ From the root directory, run the Maven command.
 
 ```sh
 mvn clean verify
+```
+
+If building a CICS bundle ZIP the CICS bundle plugin bundle-war goal is driven using the maven verify phase. The CICS JVM server name should be modified in the property in the pom.xml to match the required CICS JVMSERVER resource name, or alternatively can be set on the command line as follows.
+
+```sh
+mvn clean verify -Dcics.jvmserver=MYJVM
 ```
 
 ### Building with Maven Wrapper
