@@ -7,18 +7,13 @@ on:
     branches: ["cicsts/v6.1"]
 
 jobs:
-  build-maven:
-    name: Build Maven
+  build-mvnw:
+    name: Build Maven Wrapper
 
     runs-on: ubuntu-latest
-    continue-on-error: ${{ matrix.experimental }}
     strategy:
       matrix:
-        jdk: [8, 11]
-        experimental: [false]
-        include:
-          - jdk: 17
-            experimental: true
+        jdk: [8, 11, 17, 21]
     steps:
       - uses: actions/checkout@v3
       - name: Set up JDK ${{ matrix.jdk }}
@@ -28,28 +23,15 @@ jobs:
           distribution: "semeru"
           cache: maven
       - name: Build with Maven
-        run: mvn --batch-mode --update-snapshots --file pom.xml -Djava.version=${{ matrix.jdk }} package
-      - run: |
-             mkdir staging 
-             cp cics-java-liberty-hello-web/target/*.war staging
-             cp cics-java-liberty-hello-bundle/target/*.zip staging
-      - uses: actions/upload-artifact@v4
-        with:
-          name: cics-java-liberty-hello (Maven, Java ${{ matrix.jdk }})
-          path: staging
+        run: ./mvnw --batch-mode --update-snapshots --file pom.xml -Djava.version=${{ matrix.jdk }} verify      
 
-  build-gradle:
-    name: Build Gradle
+  build-gradlew:
+    name: Build Gradle Wrapper
     
     runs-on: ubuntu-latest
-    continue-on-error: ${{ matrix.experimental }}
     strategy:
       matrix:
-        jdk: [8, 11]
-        experimental: [false]
-        include:
-          - jdk: 17
-            experimental: true
+        jdk: [8, 11, 17, 21]
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK ${{ matrix.jdk }}
@@ -59,6 +41,6 @@ jobs:
         distribution: 'semeru'
     - uses: gradle/actions/setup-gradle@v3
       with: 
-        gradle-version: 7.6
+        gradle-version: 8.6
     - name: Build with Gradle
-      run: gradle build -Pjava_version=${{ matrix.jdk }}
+      run: ./gradlew clean build -Pjava_version=${{ matrix.jdk }}
