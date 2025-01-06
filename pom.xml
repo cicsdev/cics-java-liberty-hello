@@ -43,25 +43,5 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
-
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>com.ibm.cics</groupId>
-                    <artifactId>cics-bundle-maven-plugin</artifactId>
-                    <version>1.0.7</version>
-                    <extensions>true</extensions>
-                    <configuration>
-                        <defaultjvmserver>${cics.jvmserver}</defaultjvmserver>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-war-plugin</artifactId>
-                    <version>3.4.0</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
+  
 </project>
