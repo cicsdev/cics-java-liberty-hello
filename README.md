@@ -20,7 +20,7 @@ This sample demonstrates a simple Java web application using JavaServer Pages to
 _**Tip:** Eclipse Git provides an 'Import existing Projects' check-box when cloning a repository._
 
 ## Building
-The sample can be built with CICS Explorer, Gradle or Apache Maven. Using the supplied Gradle or Maven wrapper will give a consistent and updated version of build tooling.
+The sample can be built with CICS Explorer, Gradle or Apache Maven. Using the supplied Gradle or Maven wrappers will give a consistent and updated version of build tooling.
 
 Once run, Gradle will generate a WAR file in the `/cics-java-liberty-hello-web/build/libs` directory, while Maven will generate it in the `/cics-java-liberty-hello-web/target` directory.
 
