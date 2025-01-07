@@ -20,36 +20,39 @@ This sample demonstrates a simple Java web application using JavaServer Pages to
 _**Tip:** Eclipse Git provides an 'Import existing Projects' check-box when cloning a repository._
 
 ## Building
-The sample can be built with CICS Explorer, Gradle or Apache Maven.
+The sample can be built with CICS Explorer, Gradle or Apache Maven. Using the supplied Gradle or Maven wrapper will get a consistent and updated version of build tooling.
+
+Once run, Gradle will generate a WAR file in the `/cics-java-liberty-hello-web/build/libs` directory, while Maven will generate it in the `/cics-java-liberty-hello-web/target` directory.
+
+The bundle ZIP file for Gradle will be generated in the `/cics-java-liberty-hello-bundle/build/distributions` directory, while Maven will generate it in the `/cics-java-liberty-hello-bundle/target` directory.
 
 ### Building with CICS Explorer
 The sample should automatically be built in CICS Explorer. If not, select **Project** &rarr; **Build Project**.
 
 ### Building with Gradle
-From the root directory, run the Gradle command.
+From the root directory, run the appropriate Gradle command.
 
-```sh
-gradle clean build
-```
+If using the CICS bundle ZIP, the CICS JVM server name should be modified in the jvmserver property in the gradle build properties file to match the required CICS JVMSERVER resource name, or alternatively can be set on the command line.
 
-If using the CICS bundle ZIP, the CICS JVM server name should be modified in the jvmserver property in the gradle build properties file to match the required CICS JVMSERVER resource name, or alternatively can be set on the command line as follows, where MYJVM JVMSERVER resource name 
 
-```sh
-gradle clean build -Pcics.jvmserver=MYJVM
-```
+| Tool | Command |
+| ----------- | ----------- |
+| Gradle Wrapper (Linux/Mac) | ```./gradlew clean build``` |
+| Gradle Wrapper (Windows) | ```gradle.bat clean build``` |
+| Gradle (command-line) | ```gradle clean build``` |
+| Gradle (command-line & setting jvmserver) | ```gradle clean build -Pcics.jvmserver=MYJVM``` |
 
 ### Building with Apache Maven
-From the root directory, run the Maven command.
+From the root directory, run the appropriate Maven command.
 
-```sh
-mvn clean verify
-```
+If building a CICS bundle ZIP the CICS bundle plugin bundle-war goal is driven using the maven verify phase. The CICS JVM server name should be modified in the property in the pom.xml to match the required CICS JVMSERVER resource name, or alternatively can be set on the command line.
 
-If building a CICS bundle ZIP the CICS bundle plugin bundle-war goal is driven using the maven verify phase. The CICS JVM server name should be modified in the property in the pom.xml to match the required CICS JVMSERVER resource name, or alternatively can be set on the command line as follows.
-
-```sh
-mvn clean verify -Dcics.jvmserver=MYJVM
-```
+| Tool | Command |
+| ----------- | ----------- |
+| Maven Wrapper (Linux/Mac) | ```./mvnw clean verify``` |
+| Maven Wrapper (Windows) | ```mvnw.cmd clean verify``` |
+| Maven (command-line) | ```mvn clean verify``` |
+| Maven (command-line & setting jvmserver) | ```mvn clean verify -Dcics.jvmserver=MYJVM``` |
 
 
 ## Deploying
