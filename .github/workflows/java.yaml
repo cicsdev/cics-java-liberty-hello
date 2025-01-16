@@ -2,9 +2,9 @@ name: Build
 
 on:
   push:
-    branches: ["cicsts/v5.5"]
+    branches: ["main"]
   pull_request:
-    branches: ["cicsts/v5.5"]
+    branches: ["main"]
 
 jobs:
   build-mvnw:
