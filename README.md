@@ -62,6 +62,13 @@ If building a CICS bundle ZIP the CICS bundle plugin bundle-war goal is driven u
 2. Install the JVM server.
 3. Configure the Liberty server based on the template [`server.xml`](etc/config/liberty/server.xml).
 
+> [!NOTE]
+> For a Liberty server configured to Jakarta EE 9 at higher levels of CICS, the feature jsp-2.3 was upgraded to be pages-3.0. The server.xml should be changed to use the following feature instead:
+
+```<feature>pages-3.0</feature>```
+
+> For a Liberty server configured at Java EE 7/8, the feature should stay at jsp-2.3.
+
 ### Deploying the application to z/FS
 The application can be deployed to z/FS as either a CICS bundle file, or as an application.
 
