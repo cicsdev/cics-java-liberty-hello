@@ -58,9 +58,18 @@ If building a CICS bundle ZIP the CICS bundle plugin bundle-war goal is driven u
 ## Deploying
 
 ### Configuring the Liberty JVM server
-1. Create a JVM server with a JVM profile based on the template [JVM profile](etc/config/jvmprofiles/DFHWLP.jvmprofile).
+1. Create a Liberty JVM server.
 2. Install the JVM server.
-3. Configure the Liberty server based on the template [`server.xml`](etc/config/liberty/server.xml).
+
+> [!NOTE]
+> The server.xml feature list should be updated to correspond to the JavaEE/JakartaEE your Liberty server is configured to. See the table below.
+
+| EE Version | Feature |
+| ----------- | ----------- |
+| JEE6 | ```<feature>jsp-2.2</feature>``` |
+| JEE7/8 | ```<feature>jsp-2.3</feature>``` |
+| JEE9 | ```<feature>pages-3.0</feature>``` |
+| JEE10 | ```<feature>pages-3.1</feature>``` |
 
 ### Deploying the application to z/FS
 The application can be deployed to z/FS as either a CICS bundle file, or as an application.
