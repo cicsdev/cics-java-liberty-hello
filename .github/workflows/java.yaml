@@ -9,6 +9,7 @@ on:
 jobs:
   check-copyright:
     name: check copyright
+    runs-on: ubuntu-latest
     steps:
       # Checking out the repository which is to be actioned
       - uses: actions/checkout@v2
