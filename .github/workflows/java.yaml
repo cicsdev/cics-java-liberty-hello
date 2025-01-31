@@ -17,7 +17,7 @@ jobs:
       - uses: VinnyBabuManjaly/copyright-action@v1.0.0
         with:
           CopyrightString: 'Copyright check\nAll rights reserved (c)\n'
-          FileType: '.jsp'
+          FileType: '.java'
           Path: 'cics-java-liberty-hello-web/'
           
       # Creates pull request with all changes in file
@@ -25,6 +25,7 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          base: aj-test-copyright
 
 
   build-mvnw:
