@@ -7,6 +7,24 @@ on:
     branches: ["main"]
 
 jobs:
+  check-copyright:
+    steps:
+  # Checking out the repository which is to be actioned
+  - uses: actions/checkout@v2
+  # Implementing action on repository
+  - uses: VinnyBabuManjaly/copyright-action@v1.0.0
+    with:
+      CopyrightString: 'Copyright check\nAll rights reserved (c)\n'
+      FileType: '.py, .txt'
+      Path: 'testfolder1/, testfolder2'
+      IgnorePath: 'testfolder1/a/, testfolder3'
+  # Creates pull request with all changes in file
+  - name: Create Pull Request
+    uses: peter-evans/create-pull-request@v2
+    with:
+      token: ${{ secrets.GITHUB_TOKEN }}
+
+      
   build-mvnw:
     name: Build Maven Wrapper
 
