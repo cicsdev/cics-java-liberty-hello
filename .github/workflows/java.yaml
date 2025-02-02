@@ -26,7 +26,7 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          base: ${{ github.ref_name }}
+          base: aj-test-copyright
 
 
   build-mvnw:
