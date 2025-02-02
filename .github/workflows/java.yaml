@@ -11,7 +11,6 @@ jobs:
     name: Check Copyright
     runs-on: ubuntu-latest
     steps:
-   
       # Checking out the repository which is to be actioned
       - uses: actions/checkout@v2
       # Implementing action on repository
