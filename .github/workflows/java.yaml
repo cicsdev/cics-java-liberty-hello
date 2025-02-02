@@ -8,24 +8,25 @@ on:
 
 jobs:
   check-copyright:
-    name: check copyright
+    name: Check Copyright
     runs-on: ubuntu-latest
     steps:
+   
       # Checking out the repository which is to be actioned
       - uses: actions/checkout@v2
       # Implementing action on repository
       - uses: VinnyBabuManjaly/copyright-action@v1.0.0
         with:
-          CopyrightString: 'Copyright check\nAll rights reserved (c)\n'
+          CopyrightString: '/**\n * Copyright IBM Corp. 2025\n */'
           FileType: '.jsp'
-          Path: 'cics-java-liberty-hello-web/'
+          Path: 'cics-java-liberty-hello-web/src/main/webapp/index.jsp'
           
       # Creates pull request with all changes in file
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          base: aj-test-copyright
+          base: ${{ github.ref_name }}
 
 
   build-mvnw:
