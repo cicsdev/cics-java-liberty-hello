@@ -16,7 +16,7 @@ jobs:
       # Implementing action on repository
       - uses: VinnyBabuManjaly/copyright-action@v1.0.0
         with:
-          CopyrightString: '/**\n * Copyright IBM Corp. 2025\n */'
+          CopyrightString: '/**\n * Copyright IBM Corp. 2025\n */\n'
           FileType: '.jsp'
           Path: 'cics-java-liberty-hello-web/src/main/webapp/'
           
