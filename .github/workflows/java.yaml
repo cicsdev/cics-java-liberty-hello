@@ -16,25 +16,18 @@ jobs:
 
       - name: check copyright
         run: |
-          COPYRIGHT_LINE="/**\n * TEST Copyright IBM Corp. 2025\n */"
+          COPYRIGHT_STATEMENT="/**\n * Copyright IBM Corp. 2025\n */"
           EXTENSIONS=("*.jsp" "*.css")
 
           for ext in "${EXTENSIONS[@]}"; do
             for file in $(find . -type f -name "$ext" ! -path "cics-java-liberty-hello-web/*"); do
               if ! grep -q "Copyright" "$file"; then
-                echo -e "$COPYRIGHT_LINE\n$(cat "$file")" > "$file"
+                echo -e "$COPYRIGHT_STATEMENT\n$(cat "$file")" > "$file"
               fi
             done
           done
 
           echo "Copyright statements updated."
-
-      # # Implementing action on repository
-      # - uses: VinnyBabuManjaly/copyright-action@v1.0.0
-      #   with:
-      #     CopyrightString: '/**\n * Copyright IBM Corp. 2025\n */\n'
-      #     FileType: '.jsp'
-      #     Path: 'cics-java-liberty-hello-web/src/main/webapp/'
 
       # Creates pull request with all changes in file
       - name: Create Pull Request
