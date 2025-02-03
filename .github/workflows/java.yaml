@@ -16,8 +16,8 @@ jobs:
 
       - name: check copyright
         env:
-          EXTENSIONS: "*.py *.js *.html *.css"
-          COPYRIGHT_LINE: "/**\n * Copyright IBM Corp. 2025\n */"
+          EXTENSIONS: "*.jsp *.css"
+          COPYRIGHT_STATEMENT: "/**\n * Copyright IBM Corp. 2025\n */"
         run: |
           for ext in "${EXTENSIONS[@]}"; do
             for file in $(find . -type f -name "$ext" ! -path "cics-java-liberty-hello-web/*"); do
