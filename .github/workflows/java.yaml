@@ -11,12 +11,11 @@ jobs:
     name: Check Copyright
     runs-on: ubuntu-latest
     steps:
-      # Checking out the repository which is to be actioned
       - uses: actions/checkout@v3
 
-      - name: check copyright
+      - name: Check Copyright
         env:
-          EXTENSIONS: "*.jsp *.css"
+          EXTENSIONS: "*.jsp"
           COPYRIGHT_STATEMENT: "/**\n * Copyright IBM Corp. 2025\n */"
         run: |
           for ext in $EXTENSIONS; do
@@ -27,9 +26,6 @@ jobs:
             done
           done
 
-          echo "Copyright statements updated."
-
-      # Creates pull request with all changes in file
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
         with:
