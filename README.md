@@ -49,10 +49,38 @@ If building a CICS bundle ZIP the CICS bundle plugin bundle-war goal is driven u
 
 | Tool | Command |
 | ----------- | ----------- |
-| Maven Wrapper (Linux/Mac) | ````python print("Hello, World!") ```` |
+| Maven Wrapper (Linux/Mac) | ```./mvnw clean verify``` |
 | Maven Wrapper (Windows) | ```mvnw.cmd clean verify``` |
 | Maven (command-line) | ```mvn clean verify``` |
 | Maven (command-line & setting jvmserver) | ```mvn clean verify -Dcics.jvmserver=MYJVM``` |
+
+
+<table>
+  <tr>
+    <th>Tool</th>
+    <th>Command</th>
+  </tr>
+  <tr>
+    <td>Maven Wrapper (Linux/Mac)</td>
+    <td>
+      <pre>
+        <code>
+./mvnw clean verify
+        </code>
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>Maven Wrapper (Windows)</td>
+    <td>
+      <pre>
+        <code>
+mvnw.cmd clean verify
+        </code>
+      </pre>
+    </td>
+  </tr>
+</table>
 
 
 ## Deploying
@@ -112,25 +140,3 @@ If the application is deployed as a CICS bundle, use the following steps to defi
 ## License
 This project is licensed under [Eclipse Public License - v 2.0](LICENSE).
 
-<table>
-  <tr>
-    <th>Language</th>
-    <th>Example Code</th>
-  </tr>
-  <tr>
-    <td>Python</td>
-    <td>
-        <code>
-print("Hello, World!")
-        </code>
-    </td>
-  </tr>
-  <tr>
-    <td>JavaScript</td>
-    <td>
-        <code>
-console.log("Hello, World!");
-        </code>
-    </td>
-  </tr>
-</table>
