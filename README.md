@@ -120,21 +120,17 @@ This project is licensed under [Eclipse Public License - v 2.0](LICENSE).
   <tr>
     <td>Python</td>
     <td>
-      <pre>
         <code>
 print("Hello, World!")
         </code>
-      </pre>
     </td>
   </tr>
   <tr>
     <td>JavaScript</td>
     <td>
-      <pre>
         <code>
 console.log("Hello, World!");
         </code>
-      </pre>
     </td>
   </tr>
 </table>
