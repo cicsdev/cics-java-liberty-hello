@@ -111,3 +111,30 @@ If the application is deployed as a CICS bundle, use the following steps to defi
 
 ## License
 This project is licensed under [Eclipse Public License - v 2.0](LICENSE).
+
+<table>
+  <tr>
+    <th>Language</th>
+    <th>Example Code</th>
+  </tr>
+  <tr>
+    <td>Python</td>
+    <td>
+      <pre>
+        <code>
+print("Hello, World!")
+        </code>
+      </pre>
+    </td>
+  </tr>
+  <tr>
+    <td>JavaScript</td>
+    <td>
+      <pre>
+        <code>
+console.log("Hello, World!");
+        </code>
+      </pre>
+    </td>
+  </tr>
+</table>
