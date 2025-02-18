@@ -78,12 +78,6 @@ If building a CICS bundle ZIP the CICS bundle plugin bundle-war goal is driven u
   </tr>
 </table>
 
-<style>
-  pre { display: inline-block; }
-</style>
-
-
-
 ## Deploying
 
 ### Configuring the Liberty JVM server
