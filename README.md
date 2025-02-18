@@ -62,7 +62,7 @@ If building a CICS bundle ZIP the CICS bundle plugin bundle-war goal is driven u
   </tr>
   <tr>
     <td>Maven Wrapper (Linux/Mac)</td>
-    <td><pre><code>./mvnw clean verify</code></pre></td>
+    <td><code>./mvnw clean verify</code></td>
   </tr>
   <tr>
     <td>Maven Wrapper (Windows)</td>
