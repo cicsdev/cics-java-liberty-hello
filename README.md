@@ -74,6 +74,13 @@ If building a CICS bundle ZIP the CICS bundle plugin bundle-war goal is driven u
     <td><pre><code>mvn clean verify -Dcics.jvmserver=MYJVM</code></pre></td></tr>
 </table>
 
+<style>
+  pre {
+    margin: 0;
+    padding: 1px;
+    white-space: pre-wrap;
+  }
+</style>
 
 ## Deploying
 
