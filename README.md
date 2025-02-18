@@ -111,3 +111,9 @@ If the application is deployed as a CICS bundle, use the following steps to defi
 
 ## License
 This project is licensed under [Eclipse Public License - v 2.0](LICENSE).
+
+```bash
+function test() {
+  console.log("This code will have a copy button to the right of it");
+}
+```
