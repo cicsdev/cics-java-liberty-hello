@@ -49,7 +49,7 @@ If building a CICS bundle ZIP the CICS bundle plugin bundle-war goal is driven u
 
 | Tool | Command |
 | ----------- | ----------- |
-| Maven Wrapper (Linux/Mac) | ```./mvnw clean verify``` |
+| Maven Wrapper (Linux/Mac) | ````python print("Hello, World!") ```` |
 | Maven Wrapper (Windows) | ```mvnw.cmd clean verify``` |
 | Maven (command-line) | ```mvn clean verify``` |
 | Maven (command-line & setting jvmserver) | ```mvn clean verify -Dcics.jvmserver=MYJVM``` |
@@ -111,9 +111,3 @@ If the application is deployed as a CICS bundle, use the following steps to defi
 
 ## License
 This project is licensed under [Eclipse Public License - v 2.0](LICENSE).
-
-```bash
-function test() {
-  console.log("This code will have a copy button to the right of it");
-}
-```
