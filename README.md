@@ -74,21 +74,10 @@ If building a CICS bundle ZIP the CICS bundle plugin bundle-war goal is driven u
   </tr>
   <tr>
     <td>Maven (command-line & setting jvmserver)</td>
-    <td><pre>mvn clean verify -Dcics.jvmserver=MYJVM</pre></td>
+    <td><pre><code>mvn clean verify -Dcics.jvmserver=MYJVM</code></pre></td>
   </tr>
 </table>
 
-Markdown | Less | Pretty
---- | --- | ---
-*Still* |  ##
-<tab><tab>`renders` | **nicely**
-1 | 2 | 3
-
-
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
 
 ## Deploying
 
