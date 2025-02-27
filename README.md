@@ -80,7 +80,8 @@ If building a CICS bundle ZIP the CICS bundle plugin bundle-war goal is driven u
 
 Markdown | Less | Pretty
 --- | --- | ---
-*Still* |  ##<tab><tab>`renders` | **nicely**
+*Still* |  ##
+<tab><tab>`renders` | **nicely**
 1 | 2 | 3
 
 
