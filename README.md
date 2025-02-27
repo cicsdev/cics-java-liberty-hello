@@ -78,6 +78,17 @@ If building a CICS bundle ZIP the CICS bundle plugin bundle-war goal is driven u
   </tr>
 </table>
 
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* |  ##<tab><tab>`renders` | **nicely**
+1 | 2 | 3
+
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+
 ## Deploying
 
 ### Configuring the Liberty JVM server
