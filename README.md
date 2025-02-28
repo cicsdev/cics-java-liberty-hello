@@ -78,16 +78,22 @@ If building a CICS bundle ZIP the CICS bundle plugin bundle-war goal is driven u
   </tr>
 </table>
 
-<dl>
-  <dt>Maven Wrapper (Linux/Mac)</dt>
-  <dd><pre lang="shell">./mvnw clean verify</pre></dd>
-  <dt>Maven Wrapper (Windows)</dt>
-  <dd><pre lang="shell">mvnw.cmd clean verify</pre></dd>
-  <dt>Maven (command-line)</dt>
-  <dd><pre lang="shell">mvn clean verify</pre></dd>
-  <dt>Maven (command-line & setting jvmserver)</dt>
-  <dd><pre lang="shell">mvn clean verify -Dcics.jvmserver=MYJVM</pre></dd>
-</dl>
+Maven Wrapper (Linux/Mac):
+```shell
+./mvnw clean verify
+```
+Maven Wrapper (Windows):
+```shell
+mvnw.cmd clean verify
+```
+Maven (command-line):
+```shell
+mvn clean verify
+```
+Maven (command-line & setting jvmserver):
+```shell
+mvn clean verify -Dcics.jvmserver=MYJVM
+```
 
 
 ## Deploying
