@@ -47,12 +47,6 @@ From the root directory, run the appropriate Maven command.
 
 If building a CICS bundle ZIP the CICS bundle plugin bundle-war goal is driven using the maven verify phase. The CICS JVM server name should be modified in the property in the pom.xml to match the required CICS JVMSERVER resource name, or alternatively can be set on the command line.
 
-| Tool | Command |
-| ----------- | ----------- |
-| Maven Wrapper (Linux/Mac) | ```./mvnw clean verify``` |
-| Maven Wrapper (Windows) | ```mvnw.cmd clean verify``` |
-| Maven (command-line) | ```mvn clean verify``` |
-| Maven (command-line & setting jvmserver) | ```mvn clean verify -Dcics.jvmserver=MYJVM``` |
 
 
 <table>
