@@ -16,7 +16,7 @@ jobs:
       - name: Check Copyright
         env:
           EXTENSIONS: "*.jsp"
-          COPYRIGHT_STATEMENT: "/**\n * Copyright IBM Corp. 2024\n */"
+          BASE_COPYRIGHT: "/**\n * Copyright IBM Corp. 2024\n */"
         run: |
           for ext in $EXTENSIONS; do
             for file in $(find . -type f -name "$ext" ! -path "cics-java-liberty-hello-web/*"); do
