@@ -26,7 +26,7 @@ jobs:
                   if ! grep -q "Copyright" "$file"; then
                       echo -e "/**\n * $BASE_COPYRIGHT\n */\n$(cat "$file")" > "$file"
                   elif ! grep -q "$LAST_MODIFIED_YEAR" "$file"; then
-                      sed -i "s/$BASE_COPYRIGHT[^0-9]*/$BASE_COPYRIGHT, $LAST_MODIFIED_YEAR/" "$file"
+                      sed -i "s/$BASE_COPYRIGHT/$BASE_COPYRIGHT, $LAST_MODIFIED_YEAR/" "$file"
                   fi
               done
           done
