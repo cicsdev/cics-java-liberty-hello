@@ -16,14 +16,18 @@ jobs:
       - name: Check Copyright
         env:
           EXTENSIONS: "*.jsp"
-          COPYRIGHT_STATEMENT: "/**\n * Copyright IBM Corp. 2025\n */"
+          BASE_COPYRIGHT: "Copyright IBM Corp. 2024"
         run: |
           for ext in $EXTENSIONS; do
-            for file in $(find . -type f -name "$ext" ! -path "cics-java-liberty-hello-web/*"); do
-              if ! grep -q "Copyright" "$file"; then
-                echo -e "$COPYRIGHT_STATEMENT\n$(cat "$file")" > "$file"
-              fi
-            done
+              for file in $(find . -type f -name "$ext" ! -path "cics-java-liberty-hello-web/*"); do
+                  LAST_MODIFIED_YEAR=$(date -r "$file" +"%Y")
+                  if ! grep -q "Copyright" "$file"; then
+                      echo -e "/**\n * $BASE_COPYRIGHT\n */\n$(cat "$file")" > "$file"
+                  elif ! grep -q "$LAST_MODIFIED_YEAR" "$file"; then
+                      sed -i "" "s/$BASE_COPYRIGHT[^0-9]*/$BASE_COPYRIGHT, $LAST_MODIFIED_YEAR/" "$file"
+
+                  fi
+              done
           done
 
       - name: Create Pull Request
