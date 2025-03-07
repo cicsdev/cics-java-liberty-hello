@@ -1,5 +1,5 @@
 EXTENSIONS="*.jsp"
-BASE_COPYRIGHT="Copyright IBM Corp. 2025"
+BASE_COPYRIGHT="Copyright IBM Corp. 2000"
 DIRECTORY="./cics-java-liberty-hello-web/"
 
 for ext in "$EXTENSIONS"; do
