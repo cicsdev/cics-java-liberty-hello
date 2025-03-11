@@ -9,7 +9,7 @@ on:
 jobs:
   check-copyright:
     name: Check Copyright
-    uses: cicsdev/.github/workflows/samples-copyright-checker.yaml@main
+    uses: cicsdev/.github/.github/workflows/samples-copyright-checker.yaml@main
     with:
       directory: './cics-java-liberty-hello-web/'
       file-extensions: '*.jsp'
