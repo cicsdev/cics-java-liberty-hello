@@ -1,0 +1,52 @@
+# Sample Copyright Checker
+# 
+# This action will scan files in the given directory with specific file extensions,
+# it adds a copyright statement if none are present or updates it if necessary if,
+# there have been changes after the current copyright statement year
+# A Pull Request will be made with any changes to merge into the PR branch
+
+name: Sample Copyright Checker
+
+on:
+  workflow_call:
+    inputs:
+      directory:
+        description: 'Directory to search for copright statement'
+        required: true
+        default: './'
+        type: string
+      file-extensions:
+        description: 'Space separated string of file extensions to search for'
+        required: true
+        default: '*.java *.js *.jsp *.cbl'
+        type: string  
+      base-copyright:
+        description: 'Copyright statement to include if none exists'
+        required: true
+        default: 'Copyright IBM Corp. 2025'
+        type: string  
+
+
+jobs:
+  check-copyright:
+    name: Check Copyright
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check Copyright
+        run: |
+          ./.github/scripts/samples-copyright-checker.sh \
+            "${{ inputs.directory }}" \
+            "${{ inputs.file-extensions }}" \
+            "${{ inputs.base-copyright }}"
+
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: ${{ github.head_ref }}      
