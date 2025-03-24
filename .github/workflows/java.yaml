@@ -8,12 +8,17 @@ on:
 
 jobs:
   check-copyright:
+    runs-on: ubuntu-latest
     name: Check Copyright
-    uses: cicsdev/.github/.github/workflows/samples-copyright-checker.yaml@main
-    with:
-      directory: './cics-java-liberty-hello-web/'
-      file-extensions: '*.jsp'
-      base-copyright: 'Copyright IBM Corp. 2025'
+    steps:
+      - uses: actions/checkout@v4
+      - id: Copyright Action
+        uses: cicsdev/.github/.github/actions/samples-copyright-checker@main
+        with:
+          directory: './cics-java-liberty-hello-web/'
+          file-extensions: '*.jsp'
+          base-copyright: 'Copyright IBM Corp. 2025'
+          token: ${{ secrets.GITHUB_TOKEN }}
 
 
   build-mvnw:
