@@ -16,7 +16,7 @@ jobs:
         uses: cicsdev/.github/.github/actions/samples-copyright-checker@aj-action
         with:
           directory: './cics-java-liberty-hello-web/'
-          file-extensions: '*.jsp'
+          file-extensions: '*.jsp *.css'
           base-copyright: 'Copyright IBM Corp. 2025'
           token: ${{ secrets.GITHUB_TOKEN }}
 
