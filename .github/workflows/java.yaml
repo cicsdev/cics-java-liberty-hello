@@ -12,7 +12,7 @@ jobs:
     name: Check Copyright
     steps:
       - uses: actions/checkout@v4
-      - id: Copyright Action
+      - id: copyright-action
         uses: cicsdev/.github/.github/actions/samples-copyright-checker@main
         with:
           directory: './cics-java-liberty-hello-web/'
