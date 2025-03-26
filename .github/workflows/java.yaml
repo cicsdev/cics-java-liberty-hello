@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: copyright-action
-        uses: cicsdev/.github/.github/actions/samples-copyright-checker@main
+        uses: cicsdev/.github/.github/actions/samples-copyright-checker@aj-action
         with:
           directory: './cics-java-liberty-hello-web/'
           file-extensions: '*.jsp'
