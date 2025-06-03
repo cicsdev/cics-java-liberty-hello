@@ -5,3 +5,28 @@ plugins {
 }
 
 description = 'CICS Liberty Hello Application - Web'
+
+group = 'com.ibm.cicsdev'
+archivesBaseName='cics-java-liberty-hello'
+version = '1.0.0'
+
+
+java
+{
+	sourceCompatibility = JavaVersion.VERSION_1_8
+	targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+// If in Eclipse, add Javadoc to the local project classpath
+eclipse 
+{
+    classpath 
+    {
+        downloadJavadoc = true
+    }
+}
+
+repositories 
+{
+    mavenCentral()
+}

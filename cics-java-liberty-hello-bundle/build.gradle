@@ -8,10 +8,12 @@ dependencies {
     cicsBundlePart project(path: ':cics-java-liberty-hello-web', configuration: 'archives')
 }
 
-description = 'CICS Liberty Hello Application - CICS Bundle'
 
 cicsBundle {
     build {
-        defaultJVMServer = project.findProperty("cics.jvmserver") ?: "DFHOSGI"
+        defaultJVMServer = project.findProperty("cics.jvmserver") ?: "DFHWLP"
     }
 }
+
+description = 'CICS Liberty Hello Application - CICS Bundle'
+version = "1.0.0"
