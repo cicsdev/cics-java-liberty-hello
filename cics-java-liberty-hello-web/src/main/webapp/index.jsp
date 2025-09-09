@@ -25,7 +25,7 @@
         <section id="details">
             <div id="repository">
                 <a href="https://github.com/cicsdev/cics-java-liberty-hello">
-                    <h1>cics-java-liberty-hello test2</h1>
+                    <h1>cics-java-liberty-hello test3</h1>
                 </a>
             </div>
             <div>
