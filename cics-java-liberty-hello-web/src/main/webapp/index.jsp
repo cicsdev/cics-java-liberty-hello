@@ -1,5 +1,5 @@
 <!-- /**
- * Copyright IBM Corp. 2024
+ * Copyright IBM Corp. 2025
  */ -->
 <%@page contentType="text/html" pageEncoding="UTF-8" import="com.ibm.cics.server.Task"%>
 <!doctype html>
@@ -25,11 +25,11 @@
         <section id="details">
             <div id="repository">
                 <a href="https://github.com/cicsdev/cics-java-liberty-hello">
-                    <h1>cics-java-liberty-hello test5</h1>
+                    <h1>cics-java-liberty-hello test</h1>
                 </a>
             </div>
             <div>
-                <p>This sample demonstrates a basic enterprise Java web application using
+                <p>This samples demonstrates a basic enterprise Java web application using
                     JavaServer Pages to display some information from
                     the <a href="https://www.ibm.com/docs/api/v1/content/SSGMCP_5.5.0/reference/jcics-javadoc/com/ibm/cics/server/Task.html"><code>com.ibm.cics.server.Task</code></a>
                     class.
