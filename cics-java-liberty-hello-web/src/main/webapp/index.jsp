@@ -1,5 +1,5 @@
 <!-- /**
- * Copyright IBM Corp. 2025
+ * Copyright IBM Corp. 2024
  */ -->
 <%@page contentType="text/html" pageEncoding="UTF-8" import="com.ibm.cics.server.Task"%>
 <!doctype html>
@@ -29,7 +29,7 @@
                 </a>
             </div>
             <div>
-                <p>This samples demonstrates a basic enterprise Java web application using
+                <p>This sample demonstrates a basic enterprise Java web application using
                     JavaServer Pages to display some information from
                     the <a href="https://www.ibm.com/docs/api/v1/content/SSGMCP_5.5.0/reference/jcics-javadoc/com/ibm/cics/server/Task.html"><code>com.ibm.cics.server.Task</code></a>
                     class.
