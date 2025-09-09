@@ -1,5 +1,5 @@
 <!-- /**
- * Copyright IBM Corp. 2025
+ * Copyright IBM Corp. 2024
  */ -->
 <%@page contentType="text/html" pageEncoding="UTF-8" import="com.ibm.cics.server.Task"%>
 <!doctype html>
@@ -25,7 +25,7 @@
         <section id="details">
             <div id="repository">
                 <a href="https://github.com/cicsdev/cics-java-liberty-hello">
-                    <h1>cics-java-liberty-hello test</h1>
+                    <h1>cics-java-liberty-hello</h1>
                 </a>
             </div>
             <div>
